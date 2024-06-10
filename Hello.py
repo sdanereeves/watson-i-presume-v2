@@ -12,8 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#This is a test.
-#This is a second test.
+# URL of the hosted LLMs is hardcoded because at this time all LLMs share the same endpoint
+url = "https://us-south.ml.cloud.ibm.com"
+
+# Replace with your watsonx project id (look up in the project Manage tab)
+watsonx_project_id = "8c1a11e-880e-45c1-b139-5f10aad02aa"
+# Replace with your IBM Cloud key
+api_key = "NXHU1EJE_DyekBLO_Lmu3K9Lzek8Cn6W4sfJbfqj7L"
+
 
 import streamlit as st
 from streamlit.logger import get_logger
