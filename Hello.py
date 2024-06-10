@@ -29,7 +29,7 @@ LOGGER = get_logger(__name__)
 
 def main():
     st.set_page_config(
-        page_title="Say What",
+        page_title="Dr. Watson Web",
         page_icon="👋",
     )
 
