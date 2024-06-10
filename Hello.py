@@ -29,9 +29,16 @@ LOGGER = get_logger(__name__)
 
 def main():
     st.set_page_config(
+        layout="wide",
         page_title="Dr. Watson Web",
         page_icon="👋",
     )
+    # sdr additional code
+    jpeg_image_path = "watsonx.jpg"
+    image_width = 250
+    st.image(jpeg_image_path, width=image_width)
+
+  
 
     st.write("# Welcome to the Streamlit! 👋")
 
