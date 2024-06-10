@@ -27,7 +27,7 @@ from streamlit.logger import get_logger
 LOGGER = get_logger(__name__)
 
 
-def run():
+def main():
     st.set_page_config(
         page_title="Hello",
         page_icon="👋",
@@ -57,4 +57,4 @@ def run():
 
 
 if __name__ == "__main__":
-    run()
+    main()
