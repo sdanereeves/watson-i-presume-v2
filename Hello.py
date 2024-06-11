@@ -53,7 +53,7 @@ def main():
         #response = use_case_RAG_Web.answer_questions_from_web(api_key,watsonx_project_id,user_url,question,collection_name)
         #print("Response from the LLM:" + response)
         #st.write(response)
-        #st.write( watsonx_project_id, api_key, user_url, collection_name)
+        st.write( watsonx_project_id, api_key, user_url, collection_name)
 
 
 
