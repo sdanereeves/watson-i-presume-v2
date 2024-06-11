@@ -16,9 +16,9 @@
 url = "https://us-south.ml.cloud.ibm.com"
 
 # Replace with your watsonx project id (look up in the project Manage tab)
-watsonx_project_id = "8c1a11e-880e-45c1-b139-5f10aad02aa"
+#watsonx_project_id = "c1a11e-880e-45c1-b139-5f10aad02a"
 # Replace with your IBM Cloud key
-api_key = "NXHU1EJE_DyekBLO_Lmu3K9Lzek8Cn6W4sfJbfqj7L"
+#api_key = "XHU1EJE_DyekBLO_Lmu3K9Lzek8Cn6W4sfJbfqj7"
 
 
 import streamlit as st
@@ -37,30 +37,29 @@ def main():
     jpeg_image_path = "watsonx.jpg"
     image_width = 250
     st.image(jpeg_image_path, width=image_width)
+    # Streamlit app title
+    # This is the original code
+    st.title("Dr. Watson RAG with a Web page")
 
-  
+    #st.markdown('<font color="blue"><b><i>Enter your prompt!</i></b></font>', unsafe_allow_html=True)
+    watsonx_project_id=st.text_input("Enter a Project ID:", type="password")
+    api_key = st.text_input("Enter your API Key:", type="password")
 
-    st.write("# Welcome to the Streamlit! 👋")
+    user_url = st.text_input('Provide a URL')
+    collection_name = st.text_input('Provide a unique name for this website (lower case). Use the same name for the same URL to avoid loading data multiple times.')
 
-    st.sidebar.success("Select a demo above.")
+    # UI component to enter the question
+    question = st.text_area('Question',height=100)
+    button_clicked = st.button("Answer the question")
+    st.subheader("Response")
 
-    st.markdown(
-        """
-        Streamlit is an open-source app framework built specifically for
-        Machine Learning and Data Science projects.
-        **👈 Select a demo from the sidebar** to see some examples
-        of what Streamlit can do!
-        ### Want to learn more?
-        - Check out [streamlit.io](https://streamlit.io)
-        - Jump into our [documentation](https://docs.streamlit.io)
-        - Ask a question in our [community
-          forums](https://discuss.streamlit.io)
-        ### See more complex demos
-        - Use a neural net to [analyze the Udacity Self-driving Car Image
-          Dataset](https://github.com/streamlit/demo-self-driving)
-        - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
-    """
-    )
+  # Invoke the LLM when the button is clicked
+    if button_clicked:
+        #response = use_case_RAG_Web.answer_questions_from_web(api_key,watsonx_project_id,user_url,question,collection_name)
+        #print("Response from the LLM:" + response)
+        #st.write(response)
+        st.write(user_url)
+
 
 
 if __name__ == "__main__":
