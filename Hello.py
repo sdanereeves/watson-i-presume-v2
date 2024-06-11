@@ -48,14 +48,11 @@ def main():
     button_clicked = st.button("Answer the question")
     st.subheader("Response")
 
-  # Invoke the LLM when the button is clicked
+# Invoke the LLM when the button is clicked
     if button_clicked:
         #response = use_case_RAG_Web.answer_questions_from_web(api_key,watsonx_project_id,user_url,question,collection_name)
         #print("Response from the LLM:" + response)
-        #st.write(response)
-        st.write( watsonx_project_id, api_key, user_url, collection_name)
-
-
+        st.write(response)
 
 if __name__ == "__main__":
     main()
